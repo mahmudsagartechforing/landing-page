@@ -1,0 +1,11 @@
+nav {
+    .nav-header {
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint-down(small){
+        display: grid !important;
+        justify-content: center !important;
+    }
+}
