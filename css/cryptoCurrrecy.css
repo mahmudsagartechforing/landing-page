@@ -86,7 +86,7 @@ section .action-button {
 }
 
 img {
-  width: 100%;
+  width: 70%;
 }
 
 hr {
@@ -166,6 +166,10 @@ hr {
   }
 }
 
+.mt-0 {
+  margin-top: 0;
+}
+
 .flex {
   display: flex;
 }
@@ -224,7 +228,7 @@ h2 {
   border-color: #25c32d;
   border-top-style: solid;
   border-top-width: 3px;
-  margin: 0px auto;
+  margin: 0px auto 1.3rem;
   width: 25%;
 }
 
@@ -373,6 +377,7 @@ nav .nav-header img {
 .work-method {
   background-color: #f2f2f2;
   padding-block: 1.5rem;
+  margin-block-end: 0 !important;
 }
 
 .work-method h3 {
@@ -390,14 +395,8 @@ nav .nav-header img {
 
 @media (min-width: 40em) {
   .work-method--container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: initial;
-  }
-}
-
-@media (min-width: 64em) {
-  .work-method--container {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -417,7 +416,84 @@ nav .nav-header img {
 
 .work-method--card p {
   padding-inline: .8rem;
-  text-align: justify;
+}
+
+@media (min-width: 40em) {
+  .work-method--card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 64em) {
+  .work-method--card {
+    width: 32%;
+  }
+}
+
+@media (min-width: 40em) {
+  .work-method--card:last-child {
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .work-method--card:last-child {
+    margin-inline: 0;
+  }
+}
+
+@media (min-width: 40em) {
+  .work-method .last-row {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .work-method .last-row {
+    margin-left: 15rem;
+  }
+}
+
+.analytics {
+  background-image: url("../images/Skdata-breach-header-2_1.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-block: 2.5rem;
+  margin-block: 0 !important;
+}
+
+.analytics--container {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+@media (min-width: 40em) {
+  .analytics--container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .analytics--container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.analytics--data {
+  text-align: center;
+}
+
+.analytics--data h3 {
+  color: white;
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.analytics--data p {
+  color: #25c12d;
+  font-size: 1.25rem;
+  margin-bottom: 0;
 }
 
 .about img {
@@ -433,16 +509,12 @@ nav .nav-header img {
 
 .about li::before {
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f00c";
+  content: "\f058";
+  font-size: 2rem;
   position: absolute;
   color: #25c12d;
   left: -42px;
-  border: 1px solid #25c12d;
-  border-radius: 50%;
-  padding-block: .3rem;
-  padding-inline: .3rem;
-  top: -8px;
+  top: 0px;
 }
 
 @media (min-width: 40em) {
@@ -456,6 +528,14 @@ nav .nav-header img {
     color: #333333;
     font-size: 1.4rem;
   }
+}
+
+.about--text {
+  order: 1;
+}
+
+.about img {
+  order: 0;
 }
 
 .clients {
@@ -545,16 +625,12 @@ nav .nav-header img {
 
 .banner .action-button {
   margin-top: 1.8rem;
-  border-radius: 2px;
+  border-radius: 10px;
   text-transform: uppercase;
-  box-shadow: 0px 2px #187e1d;
 }
 
-.banner .action-button i {
-  background-color: #1c8e22;
-  border-radius: 50%;
-  padding: .2rem .4rem;
-  border: .5px solid green;
+.banner .action-button h3 {
+  font-weight: 400;
 }
 
 .footer-content {

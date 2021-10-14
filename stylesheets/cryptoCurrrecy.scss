@@ -1,18 +1,20 @@
 @import "global_imports";
+
 // @import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
 h2 {
     text-align: center;
     text-transform: uppercase;
 }
-.divider{
+
+.divider {
     border-color: rgb(37, 195, 45);
     border-top-style: solid;
     border-top-width: 3px;
-    margin: 0px auto;
+    margin: 0px auto 1.3rem;
     width: 25%;
 }
 
-.arrowDown{
+.arrowDown {
     position: absolute;
     bottom: -10px;
     left: 40px;
@@ -28,7 +30,8 @@ nav {
             width: 100%;
         }
     }
-    @include breakpoint-down(small){
+
+    @include breakpoint-down(small) {
         display: grid !important;
         justify-content: center !important;
     }
@@ -156,6 +159,7 @@ nav {
 .work-method {
     background-color: $grayBackground;
     padding-block: 1.5rem;
+    margin-block-end: 0 !important;
 
     h3 {
         font-weight: 700;
@@ -170,12 +174,8 @@ nav {
         margin-bottom: 1.8rem;
 
         @include breakpoint-up(medium) {
-            grid-template-columns: repeat(2, 1fr);
-            align-items: initial;
-        }
-
-        @include breakpoint-up(large) {
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 
@@ -194,12 +194,74 @@ nav {
 
         p {
             padding-inline: .8rem;
-            text-align: justify;
+        }
+
+        @include breakpoint-up(medium) {
+            width: 45%;
+        }
+
+        @include breakpoint-up(large) {
+            width: 32%;
+        }
+
+        &:last-child {
+            @include breakpoint-up(medium) {
+                margin-inline: auto;
+            }
+            @include breakpoint-up(large) {
+                margin-inline: 0;
+            }
+        }
+    }
+
+    .last-row {
+        @include breakpoint-up(medium) {
+            margin-left: 0;
+        }
+
+        @include breakpoint-up(large) {
+            margin-left: 15rem;
+        }
+    }
+}
+
+.analytics{
+    background-image: url("../images/Skdata-breach-header-2_1.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-block: 2.5rem;
+    margin-block: 0 !important;
+
+    &--container{
+        display: grid;
+        grid-gap: 2rem;
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+
+    &--data{
+        text-align: center;
+        // padding-block-start: 1.3rem;
+        h3{
+            color: $secondaryColor;
+            margin-bottom: 0;
+            font-size: 3rem;
+        }
+        p{
+            color: $techForingGreen;
+            font-size: $font-xlg;
+            margin-bottom: 0;
         }
     }
 }
 
 .about {
+
     img {
         width: 100%;
     }
@@ -212,16 +274,12 @@ nav {
 
         &::before {
             font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            content: "\f00c";
+            content: "\f058";
+            font-size: 2rem;
             position: absolute;
             color: $techForingGreen;
             left: -42px;
-            border: 1px solid #25c12d;
-            border-radius: 50%;
-            padding-block: .3rem;
-            padding-inline: .3rem;
-            top: -8px;
+            top: 0px;
         }
     }
 
@@ -238,14 +296,25 @@ nav {
             }
         }
     }
+
+    &--text{
+        order: 1;
+
+        
+    }
+    img{
+        order: 0;
+    }
 }
 
 .clients {
     background-color: $grayBackground;
-    padding-block: 3rem ;
-    &--container{
+    padding-block: 3rem;
+
+    &--container {
         @extend .partners--container;
-        @include breakpoint-up(medium){
+
+        @include breakpoint-up(medium) {
             grid-template-columns: repeat(7, 1fr);
         }
     }
@@ -282,20 +351,21 @@ nav {
         }
     }
 
-    &--container{
-        
-        @include breakpoint-up(large){
+    &--container {
+
+        @include breakpoint-up(large) {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 1rem
         }
     }
 
-    &--author{
+    &--author {
         display: grid;
         grid-template-columns: 115px 1fr;
         grid-gap: 1rem;
-        img{
+
+        img {
             width: 100%;
             border-radius: $border-circle;
             align-self: center;
@@ -304,40 +374,41 @@ nav {
 
     }
 
-    &--author-info{
+    &--author-info {
         display: grid;
-        .info{
+
+        .info {
             color: #d1d1d1;
         }
     }
 }
 
-.banner{
+.banner {
     background-color: $grayBackground;
     text-align: center;
     padding-block: 3rem;
-    h2{
+
+    h2 {
         color: #000;
         margin-block: .5rem;
     }
-    .text-green{
+
+    .text-green {
         color: $techForingGreen;
     }
-    .action-button{
+
+    .action-button {
         margin-top: 1.8rem;
-        border-radius: 2px;
+        border-radius: 10px;
         text-transform: uppercase;
-        box-shadow: 0px 2px #187e1d;
-        i{
-            background-color: #1c8e22;
-            border-radius: $border-circle;
-            padding: .2rem .4rem;
-            border: .5px solid green;
+
+        h3{
+            font-weight: 400;
         }
     }
 }
 
-.footer-content{
+.footer-content {
     display: grid;
     text-align: center;
     grid-gap: 1rem;
