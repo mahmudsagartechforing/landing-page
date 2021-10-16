@@ -1,6 +1,5 @@
 @import "global_imports";
 
-// @import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
 h2 {
     text-align: center;
     text-transform: uppercase;
@@ -65,6 +64,14 @@ nav {
                 text-align: start;
             }
         }
+        p{
+            color: $secondaryColor;
+        }
+        small{
+            font-weight: 500;
+            font-size: .8rem;
+        }
+
 
         @include breakpoint-up(large) {
             display: grid;
@@ -116,44 +123,50 @@ nav {
     }
 }
 
-.offers {
+.about {
+
+    img {
+        width: 100%;
+    }
+
+    li {
+        list-style: none;
+        position: relative;
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f058";
+            font-size: 2rem;
+            position: absolute;
+            color: $techForingGreen;
+            left: -42px;
+            top: 0px;
+        }
+    }
 
     &--container {
         display: grid;
-        justify-content: center;
-
         @include breakpoint-up(medium) {
-            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
+            grid-gap: 3rem;
+
+            li {
+                color: $primaryText;
+                font-size: 1.4rem;
+            }  
+        }
+        img{
+            order: 0;
         }
     }
-
-    &--coloumn {
-
-        &:first-child {
-            p:last-child {
-                border-block-end: 2px solid $techForingGreen;
-            }
-        }
-
-        &:first-child,
-        &:last-child {
-            p {
-                font-weight: 600;
-                padding-block: 1.5rem;
-                text-align: center;
-                border-block-start: 2px solid $techForingGreen;
-                margin-bottom: 0;
-
-                @include breakpoint-up(medium) {
-                    padding-block: 3rem;
-                    border-block-end: none;
-                    text-align: start;
-                }
-            }
-        }
-
+    &--text{
+        order: 1;
     }
+
+    
 }
 
 .work-method {
@@ -260,52 +273,57 @@ nav {
     }
 }
 
-.about {
+.feature{
+    @extend .about;
 
-    img {
-        width: 100%;
-    }
+    &--container{
+        @extend .about--container;
+        line-height: 1.4em;
 
-    li {
-        list-style: none;
-        position: relative;
-        font-size: 1.7rem;
-        margin-bottom: 1.5rem;
-
-        &::before {
-            font-family: "Font Awesome 5 Free";
-            content: "\f058";
-            font-size: 2rem;
-            position: absolute;
-            color: $techForingGreen;
-            left: -42px;
-            top: 0px;
+        img{
+            order: 0;
         }
-    }
 
-    &--container {
-        @include breakpoint-up(medium) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            grid-gap: 3rem;
-
-            li {
-                color: $primaryText;
-                font-size: 1.4rem;
+        @include breakpoint-up(medium){
+            img{
+                order: 1;
             }
         }
     }
 
     &--text{
         order: 1;
+        @include breakpoint-up(medium){
+            order: 0;
+        }
+    }
 
-        
+    &--text-body{                           
+        h3{
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 0;
+        }
+        p{
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: .5remn;
+        }
+
+        @include breakpoint-down(medium){
+            h3{
+                font-size: 1.5rem;
+            }
+        }
+
+        @include breakpoint-down(small){
+            text-align: center;
+        }
+
     }
-    img{
-        order: 0;
-    }
+    
 }
+
 
 .clients {
     background-color: $grayBackground;
@@ -337,6 +355,7 @@ nav {
         padding-block-start: 1.8rem;
         padding-block-end: 3rem;
         position: relative;
+        min-height: 325px;
 
         &::after {
             font-family: "Font Awesome 5 Free";
@@ -366,7 +385,8 @@ nav {
         grid-gap: 1rem;
 
         img {
-            width: 100%;
+            width: 100px;
+            height: 100px;
             border-radius: $border-circle;
             align-self: center;
             justify-self: center;
@@ -378,7 +398,7 @@ nav {
         display: grid;
 
         .info {
-            color: #d1d1d1;
+            color: #666;
         }
     }
 }
@@ -393,6 +413,11 @@ nav {
         margin-block: .5rem;
     }
 
+    h3 {
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+
     .text-green {
         color: $techForingGreen;
     }
@@ -401,13 +426,24 @@ nav {
         margin-top: 1.8rem;
         border-radius: 10px;
         text-transform: uppercase;
+    }
+}
+.blue-background-banner{
+    background-color: $primaryHeading;
+    color: $secondaryColor;
+    h2{
+        color: $secondaryColor;
+    }
+    .action-button{
+        color: $primaryHeading;
+        background-color: $secondaryColor;
+        transition: hover 1s;
 
-        h3{
-            font-weight: 400;
+        &:hover{
+            background-color: #e5e5e5;
         }
     }
 }
-
 .footer-content {
     display: grid;
     text-align: center;

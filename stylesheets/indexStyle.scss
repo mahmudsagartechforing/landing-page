@@ -44,7 +44,10 @@ h2 {
                 text-align: start;
             }
         }
-
+        p{
+            color: $secondaryColor;
+        }
+        
         @include breakpoint-up(large) {
             display: grid;
             grid-template-columns: 2fr 1.4fr;
