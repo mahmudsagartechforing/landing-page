@@ -5,7 +5,7 @@ h2 {
     text-transform: uppercase;
 }
 
-h4{
+h4 {
     font-weight: 400;
 }
 
@@ -43,7 +43,7 @@ nav {
 }
 
 .jumbotron {
-    background-image: url('../images/crypto_investigation.webp');
+    background-image: url('../images/BankFraud.webp');
     background-repeat: none;
     background-position: center;
     background-size: cover;
@@ -70,12 +70,14 @@ nav {
                 text-align: start;
             }
         }
-        p{
+
+        p {
             color: $secondaryColor;
             font-size: 1.8rem;
             line-height: 1.4;
         }
-        small{
+
+        small {
             font-weight: 500;
             font-size: .8rem;
         }
@@ -135,25 +137,26 @@ nav {
         width: 100%;
     }
 
-    li {
-        list-style: none;
-        position: relative;
-        font-size: 1.7rem;
-        margin-bottom: 1.5rem;
+    // li {
+    //     list-style: none;
+    //     position: relative;
+    //     font-size: 1.7rem;
+    //     margin-bottom: 1.5rem;
 
-        &::before {
-            font-family: "Font Awesome 5 Free";
-            content: "\f058";
-            font-size: 2rem;
-            position: absolute;
-            color: $techForingGreen;
-            left: -42px;
-            top: 0px;
-        }
-    }
+    //     &::before {
+    //         font-family: "Font Awesome 5 Free";
+    //         content: "\f058";
+    //         font-size: 2rem;
+    //         position: absolute;
+    //         color: $techForingGreen;
+    //         left: -42px;
+    //         top: 0px;
+    //     }
+    // }
 
     &--container {
         display: grid;
+
         @include breakpoint-up(medium) {
             grid-template-columns: 1fr 1fr;
             align-items: center;
@@ -162,17 +165,42 @@ nav {
             li {
                 color: $primaryText;
                 font-size: 1.4rem;
-            }  
+            }
         }
-        img{
-            order: 0;
-        }
-    }
-    &--text{
-        order: 1;
     }
 
-    
+    img {
+        order: 0;
+    }
+
+    &--text {
+        order: 1;
+        display: grid;
+        margin-top: 1rem;
+        grid-gap: 1rem;
+
+        @include breakpoint-up(medium) {
+            margin-top: 0;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &--text-card {
+        display: grid;
+        text-align: center;
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin-inline: auto;
+        }
+        h4{
+            color: #333;
+            font-weight: 300;
+        }
+    }
+
+
 }
 
 .work-method {
@@ -193,8 +221,12 @@ nav {
         margin-bottom: 1.8rem;
 
         @include breakpoint-up(medium) {
-            display: flex;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: initial;
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
@@ -209,42 +241,20 @@ nav {
 
         h4 {
             margin: 0;
+            font-weight: 700;
         }
 
         p {
             padding-inline: .8rem;
+            font-weight: 300;
+            color: #00000099;
         }
 
-        @include breakpoint-up(medium) {
-            width: 45%;
-        }
-
-        @include breakpoint-up(large) {
-            width: 32%;
-        }
-
-        &:last-child {
-            @include breakpoint-up(medium) {
-                margin-inline: auto;
-            }
-            @include breakpoint-up(large) {
-                margin-inline: 0;
-            }
-        }
     }
 
-    .last-row {
-        @include breakpoint-up(medium) {
-            margin-left: 0;
-        }
-
-        @include breakpoint-up(large) {
-            margin-left: 15rem;
-        }
-    }
 }
 
-.analytics{
+.analytics {
     background-image: url("../images/Skdata-breach-header-2_1.webp");
     background-repeat: no-repeat;
     background-position: center;
@@ -252,26 +262,30 @@ nav {
     padding-block: 2.5rem;
     margin-block: 0 !important;
 
-    &--container{
+    &--container {
         display: grid;
         grid-gap: 2rem;
-        @include breakpoint-up(medium){
-            grid-template-columns: repeat(2,1fr);
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
         }
-        @include breakpoint-up(large){
-            grid-template-columns: repeat(4,1fr);
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 
-    &--data{
+    &--data {
         text-align: center;
+
         // padding-block-start: 1.3rem;
-        h3{
+        h3 {
             color: $secondaryColor;
             margin-bottom: 0;
             font-size: 3rem;
         }
-        p{
+
+        p {
             color: $techForingGreen;
             font-size: $font-xlg;
             margin-bottom: 0;
@@ -279,55 +293,57 @@ nav {
     }
 }
 
-.feature{
+.feature {
     @extend .about;
 
-    &--container{
+    &--container {
         @extend .about--container;
         line-height: 1.4em;
 
-        img{
+        img {
             order: 0;
         }
 
-        @include breakpoint-up(medium){
-            img{
+        @include breakpoint-up(medium) {
+            img {
                 order: 1;
             }
         }
     }
 
-    &--text{
+    &--text {
         order: 1;
-        @include breakpoint-up(medium){
+
+        @include breakpoint-up(medium) {
             order: 0;
         }
     }
 
-    &--text-body{                           
-        h3{
+    &--text-body {
+        h3 {
             font-weight: 700;
             font-size: 1.8rem;
             margin-bottom: 0;
         }
-        p{
+
+        p {
             font-weight: 300;
             font-size: 1.3rem;
             margin-bottom: .5remn;
         }
 
-        @include breakpoint-down(medium){
-            h3{
+        @include breakpoint-down(medium) {
+            h3 {
                 font-size: 1.5rem;
             }
         }
 
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             text-align: center;
         }
 
     }
-    
+
 }
 
 
@@ -362,6 +378,8 @@ nav {
         padding-block-end: 3rem;
         position: relative;
         min-height: 325px;
+        color: #000;
+        font-weight: 400;
 
         &::after {
             font-family: "Font Awesome 5 Free";
@@ -423,7 +441,21 @@ nav {
         font-weight: 300;
         font-size: 1.5rem;
     }
+    &--text-container{
+        display: grid;
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+        }
+    }
 
+    &--text{
+        font-size: 1.3rem;
+
+        @include breakpoint-up(medium){
+            font-size: 1.5rem;
+        }
+    }
     .text-green {
         color: $techForingGreen;
     }
@@ -432,125 +464,5 @@ nav {
         margin-top: 1.8rem;
         border-radius: 10px;
         text-transform: uppercase;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
     }
-}
-
-
-// cybercrime page
-
-#cybercrime{
-    h2{
-        color: $primaryHeading;
-    }
-    .jumbotron{
-        background-image: url('../images/crime_investigation_header.webp');
-        h2{
-            color: $secondaryColor;
-        }
-    }
-
-    .coloumn-5{
-        @include breakpoint-up(medium){
-            grid-template-columns: repeat(5, 1fr);
-            justify-content: center;
-
-            img{
-                width: 50%;
-            }
-            img:not(:last-child){
-                justify-self: end;
-            }
-            img:nth-last-child(2){
-                justify-self: center;
-            }
-        }
-    }
-
-    .work-method{
-        &--container{
-
-            @include breakpoint-up(medium){
-                justify-content: center;
-            }
-        }
-        &--card{
-
-            @include breakpoint-up(large){
-                width: 30%;
-            }
-        }
-        .last-row{
-            margin-left: 0;
-        }
-    }
-    .feature{
-        
-        &--text{
-            h2{
-                text-align: start !important;
-            }
-            p{
-                font-size: 1.5rem;
-            }
-            li {
-                list-style: none;
-                position: relative;
-                font-size: 1.4rem;
-                margin-bottom: 1.5rem;
-                color: #000;
-                font-weight: 400;
-                &::before {
-                    content: "";
-                }
-                i{
-                    font-size: $font-lg;
-                    color: $techForingGreen;
-                    position: absolute;
-                    left: -35px;
-                    top: 5px;
-                }
-            }
-        }
-    }
-    .banner{
-        h2{
-            color: #333;
-        }
-        h3{
-            font-weight: 500;
-        }
-        .action-button{
-            margin-top: 0;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
-
-            i{
-                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
-                padding: 6px 10px;
-                border-radius: $border-circle;
-                border-color: rgb(255, 255, 255)
-            }
-        }
-    }
-
-    .about{
-
-        &--text{
-            @extend .feature--text;
-
-        }
-    }
-
-    .testimonial{
-        &--text{
-            color: #000;
-            font-size: 1.4rem;
-        }
-        &--author-info{
-            .info {
-                font-size: .9rem;
-            }
-        }
-    }
-    
 }

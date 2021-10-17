@@ -102,6 +102,30 @@ hr {
   background-color: rgba(0, 0, 0, 0.38);
 }
 
+.blue-background-banner {
+  background-color: #182f59 !important;
+  color: white !important;
+}
+
+.blue-background-banner h2 {
+  color: white !important;
+}
+
+.blue-background-banner p {
+  color: white;
+}
+
+.blue-background-banner .action-button {
+  color: #000080;
+  background-color: white;
+  transition: hover 1s;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.blue-background-banner .action-button:hover {
+  background-color: #e5e5e5 !important;
+}
+
 .container {
   max-width: 75rem;
   margin: auto;
@@ -169,8 +193,20 @@ hr {
   }
 }
 
+.align-self-start {
+  align-self: start;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
 .mt-0 {
-  margin-top: 0;
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }
 
 .flex {
@@ -256,9 +292,16 @@ nav .nav-header img {
   }
 }
 
+.footer-content {
+  display: grid;
+  text-align: center;
+  grid-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 h2 {
   text-align: center;
-  color: navy;
+  color: #000080;
   text-transform: uppercase;
 }
 
