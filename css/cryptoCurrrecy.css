@@ -241,6 +241,10 @@ button,
   }
 }
 
+nav {
+  padding-top: 1rem;
+}
+
 nav .nav-header img {
   width: 100%;
 }
