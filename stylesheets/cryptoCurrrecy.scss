@@ -28,6 +28,8 @@ h4{
 }
 
 nav {
+    padding-top: 1rem;
+    
     .nav-header {
         img {
             width: 100%;
@@ -446,7 +448,7 @@ nav {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 
         &:hover{
-            background-color: #e5e5e5;
+            background-color: #e5e5e5 !important;
         }
     }
 }

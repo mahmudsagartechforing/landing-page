@@ -241,6 +241,17 @@ button,
   }
 }
 
+nav .nav-header img {
+  width: 100%;
+}
+
+@media (max-width: 39.9375em) {
+  nav {
+    display: grid !important;
+    justify-content: center !important;
+  }
+}
+
 h2 {
   text-align: center;
   color: navy;

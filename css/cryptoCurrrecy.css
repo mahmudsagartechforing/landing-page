@@ -241,6 +241,17 @@ button,
   }
 }
 
+nav .nav-header img {
+  width: 100%;
+}
+
+@media (max-width: 39.9375em) {
+  nav {
+    display: grid !important;
+    justify-content: center !important;
+  }
+}
+
 h2 {
   text-align: center;
   text-transform: uppercase;
@@ -266,6 +277,10 @@ h4 {
   height: 20px;
   background: inherit;
   transform: rotate(45deg);
+}
+
+nav {
+  padding-top: 1rem;
 }
 
 nav .nav-header img {
@@ -706,7 +721,7 @@ nav .nav-header img {
 }
 
 .blue-background-banner .action-button:hover {
-  background-color: #e5e5e5;
+  background-color: #e5e5e5 !important;
 }
 
 .footer-content {
