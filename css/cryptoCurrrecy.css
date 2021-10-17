@@ -84,6 +84,10 @@ section .action-button {
   justify-self: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 img {
   width: 70%;
 }
@@ -209,8 +213,20 @@ button,
   transition: all 1s;
 }
 
+.action-button i {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
 .action-button:hover {
-  background-color: #18811e;
+  background-color: #1a861f !important;
+}
+
+.border-pill {
+  border-radius: 50px !important;
+}
+
+.shadow-bottom {
+  box-shadow: 0px 3px 5px 1px #1a861f;
 }
 
 @media (max-width: 39.9375em) {
@@ -228,6 +244,10 @@ button,
 h2 {
   text-align: center;
   text-transform: uppercase;
+}
+
+h4 {
+  font-weight: 400;
 }
 
 .divider {
@@ -294,6 +314,8 @@ nav .nav-header img {
 
 .jumbotron--content p {
   color: white;
+  font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 .jumbotron--content small {
@@ -308,10 +330,6 @@ nav .nav-header img {
     align-items: center;
     grid-gap: 1.5rem;
   }
-}
-
-.jumbotron--body-text {
-  font-size: 1.4rem;
 }
 
 .jumbotron--form h2 {
@@ -538,12 +556,12 @@ nav .nav-header img {
   }
 }
 
-.feature--text {
+.feature--text, #cybercrime .about--text {
   order: 1;
 }
 
 @media (min-width: 40em) {
-  .feature--text {
+  .feature--text, #cybercrime .about--text {
     order: 0;
   }
 }
@@ -668,6 +686,7 @@ nav .nav-header img {
   margin-top: 1.8rem;
   border-radius: 10px;
   text-transform: uppercase;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .blue-background-banner {
@@ -683,6 +702,7 @@ nav .nav-header img {
   color: navy;
   background-color: white;
   transition: hover 1s;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 .blue-background-banner .action-button:hover {
@@ -694,5 +714,107 @@ nav .nav-header img {
   text-align: center;
   grid-gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+#cybercrime h2 {
+  color: navy;
+}
+
+#cybercrime .jumbotron {
+  background-image: url("../images/crime_investigation_header.webp");
+}
+
+#cybercrime .jumbotron h2 {
+  color: white;
+}
+
+@media (min-width: 40em) {
+  #cybercrime .coloumn-5 {
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+  }
+  #cybercrime .coloumn-5 img {
+    width: 50%;
+  }
+  #cybercrime .coloumn-5 img:not(:last-child) {
+    justify-self: end;
+  }
+  #cybercrime .coloumn-5 img:nth-last-child(2) {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 40em) {
+  #cybercrime .work-method--container {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 64em) {
+  #cybercrime .work-method--card {
+    width: 30%;
+  }
+}
+
+#cybercrime .work-method .last-row {
+  margin-left: 0;
+}
+
+#cybercrime .feature--text h2, #cybercrime .about--text h2 {
+  text-align: start !important;
+}
+
+#cybercrime .feature--text p, #cybercrime .about--text p {
+  font-size: 1.5rem;
+}
+
+#cybercrime .feature--text li, #cybercrime .about--text li {
+  list-style: none;
+  position: relative;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+  font-weight: 400;
+}
+
+#cybercrime .feature--text li::before, #cybercrime .about--text li::before {
+  content: "";
+}
+
+#cybercrime .feature--text li i, #cybercrime .about--text li i {
+  font-size: 1.125rem;
+  color: #25c12d;
+  position: absolute;
+  left: -35px;
+  top: 5px;
+}
+
+#cybercrime .banner h2 {
+  color: #333;
+}
+
+#cybercrime .banner h3 {
+  font-weight: 500;
+}
+
+#cybercrime .banner .action-button {
+  margin-top: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+#cybercrime .banner .action-button i {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+  padding: 6px 10px;
+  border-radius: 50%;
+  border-color: white;
+}
+
+#cybercrime .testimonial--text {
+  color: #000;
+  font-size: 1.4rem;
+}
+
+#cybercrime .testimonial--author-info .info {
+  font-size: .9rem;
 }
 /*# sourceMappingURL=cryptoCurrrecy.css.map */
