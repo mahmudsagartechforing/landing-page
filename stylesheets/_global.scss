@@ -94,6 +94,14 @@ section{
     text-align: center;
 }
 
+.text-dark{
+    color: #000 !important;
+}
+
+.text-green {
+    color: $techForingGreen;
+}
+
 img{
     width: 70%;
 }
@@ -193,6 +201,8 @@ hr{
         }
     }
 }
+
+
 
 .align-self-start{
     align-self: start;

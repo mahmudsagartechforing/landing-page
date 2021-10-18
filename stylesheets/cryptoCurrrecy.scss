@@ -44,13 +44,14 @@ nav {
 
 .jumbotron {
     background-image: url('../images/crypto_investigation.webp');
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     line-height: $font-lg;
     margin-block-end: 1rem;
     color: $secondaryColor;
+    margin-top: 0;
 
     .container {
         position: relative;

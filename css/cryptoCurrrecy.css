@@ -88,6 +88,14 @@ section .action-button {
   text-align: center;
 }
 
+.text-dark {
+  color: #000 !important;
+}
+
+.text-green {
+  color: #25c12d;
+}
+
 img {
   width: 70%;
 }
@@ -343,13 +351,14 @@ nav .nav-header img {
 
 .jumbotron {
   background-image: url("../images/crypto_investigation.webp");
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
   line-height: 1.125rem;
   margin-block-end: 1rem;
   color: white;
+  margin-top: 0;
 }
 
 .jumbotron .container {
