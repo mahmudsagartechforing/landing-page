@@ -92,8 +92,20 @@ section .action-button {
   color: #000 !important;
 }
 
+.text-blue {
+  color: #182f59 !important;
+}
+
+.text-green {
+  color: #25c12d !important;
+}
+
+.text-dark {
+  color: #000 !important;
+}
+
 .text-white {
-  color: white !important;
+  color: #dddddd !important;
 }
 
 .text-green {
@@ -116,20 +128,20 @@ hr {
 
 .blue-background-banner {
   background-color: #182f59 !important;
-  color: white !important;
+  color: #dddddd !important;
 }
 
 .blue-background-banner h2 {
-  color: white !important;
+  color: #dddddd !important;
 }
 
 .blue-background-banner p {
-  color: white;
+  color: #dddddd;
 }
 
 .blue-background-banner .action-button {
   color: #000080;
-  background-color: white;
+  background-color: #dddddd;
   transition: hover 1s;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
@@ -262,7 +274,7 @@ button,
 .action-button {
   padding: 1rem 1.5rem;
   background-color: #25c12d;
-  color: white;
+  color: #dddddd;
   text-transform: uppercase;
   border-radius: 50px;
   font-size: 1.125rem;
@@ -369,7 +381,7 @@ nav .nav-header img {
   position: relative;
   line-height: 1.125rem;
   margin-block-end: 1rem;
-  color: white;
+  color: #dddddd;
   margin-top: 0;
 }
 
@@ -385,7 +397,7 @@ nav .nav-header img {
 
 .jumbotron--content h2 {
   font-weight: 900;
-  color: white;
+  color: #dddddd;
 }
 
 @media (min-width: 40em) {
@@ -396,7 +408,7 @@ nav .nav-header img {
 }
 
 .jumbotron--content p {
-  color: white;
+  color: #dddddd;
   font-size: 1.25rem;
   line-height: 1.4;
 }
@@ -665,7 +677,7 @@ nav .nav-header img {
 }
 
 .analytics--data h3 {
-  color: white;
+  color: #dddddd;
   margin-bottom: 0;
   font-size: 3rem;
 }
