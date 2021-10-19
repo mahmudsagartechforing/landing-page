@@ -92,6 +92,10 @@ section .action-button {
   color: #000 !important;
 }
 
+.text-white {
+  color: white !important;
+}
+
 .text-green {
   color: #25c12d;
 }
@@ -199,6 +203,14 @@ hr {
   .container--pb {
     padding-bottom: 6rem;
   }
+}
+
+.text-calpitalize {
+  text-transform: capitalize !important;
+}
+
+.font-bold {
+  font-weight: 600 !important;
 }
 
 .align-self-start {

@@ -129,7 +129,7 @@ h2 {
 
                 @include breakpoint-up(medium) {
                     padding-block: 3rem;
-                    border-block-end: none;
+                    border-block-end: none !important;
                     text-align: start;
                 }
             }

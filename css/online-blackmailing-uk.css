@@ -322,6 +322,7 @@ nav .nav-header img {
 h2 {
   text-align: center;
   text-transform: uppercase;
+  color: #000080;
 }
 
 h4 {
@@ -331,7 +332,7 @@ h4 {
 .divider {
   border-color: #25c32d;
   border-top-style: solid;
-  border-top-width: 3px;
+  border-top-width: 6px;
   margin: 0px auto 1.3rem;
   width: 25%;
 }
@@ -362,7 +363,7 @@ nav .nav-header img {
 }
 
 .jumbotron {
-  background-image: url("../images/crypto_investigation.webp");
+  background-image: url("../images/hack_investigation_header_2.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -403,22 +404,23 @@ nav .nav-header img {
 
 @media (min-width: 40em) {
   .jumbotron--content p {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
 @media (min-width: 64em) {
   .jumbotron--content {
     display: grid;
-    grid-template-columns: 2fr 1.4fr;
+    grid-template-columns: 2fr 1.3fr;
     align-items: center;
-    grid-gap: 1.5rem;
+    grid-gap: 5rem;
   }
 }
 
 .jumbotron--body-text p {
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: 300;
+  font-size: 1.8rem;
 }
 
 .jumbotron--body-text li {
@@ -429,9 +431,9 @@ nav .nav-header img {
 .jumbotron--body-text li::before {
   font-family: "Font Awesome 5 Free";
   position: absolute;
-  content: "\f111";
+  content: "\f0a9";
   font-weight: 900;
-  color: #25c12d;
+  color: white;
   font-size: 1rem;
   left: -34px;
   top: 50%;
@@ -481,203 +483,103 @@ nav .nav-header img {
   }
 }
 
+.offers {
+  background-color: #f2f2f2;
+  padding-block: 2rem;
+}
+
 .offers--container {
   display: grid;
   justify-content: center;
-}
-
-@media (min-width: 40em) {
-  .offers--container {
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-  }
-}
-
-.offers--card {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  align-items: baseline;
-}
-
-.offers--card h4 {
-  margin-bottom: 0;
-  font-weight: 600;
-}
-
-.offers--card i {
-  color: #25c12d;
-}
-
-.about img, .feature img {
-  width: 100%;
-}
-
-.about li, .feature li {
-  list-style: none;
-  position: relative;
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-}
-
-.about li::before, .feature li::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f054";
-  font-size: 2rem;
-  position: absolute;
-  color: #25c12d;
-  left: -42px;
-  top: 0px;
-}
-
-.about--container, .feature--container {
-  display: grid;
-}
-
-@media (min-width: 40em) {
-  .about--container, .feature--container {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    grid-gap: 3rem;
-  }
-  .about--container li, .feature--container li {
-    color: #333333;
-    font-size: 1.4rem;
-  }
-}
-
-.about--container img, .feature--container img {
-  order: 0;
-}
-
-.about--text {
-  order: 1;
-}
-
-.work-method {
-  background-color: #f2f2f2;
-  padding-block: 1.5rem;
-  margin-block-end: 0 !important;
-}
-
-.work-method h3 {
-  font-weight: 700;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.work-method--container {
-  display: grid;
-  align-items: center;
-  grid-gap: 1.5rem;
-  margin-bottom: 1.8rem;
-}
-
-@media (min-width: 40em) {
-  .work-method--container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.work-method--card {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-gap: 1.5rem;
-}
-
-.work-method--card img {
-  width: 100%;
-}
-
-.work-method--card h4 {
-  margin: 0;
-}
-
-.work-method--card p {
-  padding-inline: .8rem;
-}
-
-@media (min-width: 40em) {
-  .work-method--card {
-    width: 45%;
-  }
-}
-
-@media (min-width: 64em) {
-  .work-method--card {
-    width: 32%;
-  }
-}
-
-@media (min-width: 40em) {
-  .work-method--card:last-child {
-    margin-inline: auto;
-  }
-}
-
-@media (min-width: 64em) {
-  .work-method--card:last-child {
-    margin-inline: 0;
-  }
-}
-
-@media (min-width: 40em) {
-  .work-method .last-row {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 64em) {
-  .work-method .last-row {
-    margin-left: 15rem;
-  }
-}
-
-.analytics {
-  background-image: url("../images/Skdata-breach-header-2_1.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-block: 2.5rem;
-  margin-block: 0 !important;
-}
-
-.analytics--container {
-  display: grid;
   grid-gap: 2rem;
 }
 
 @media (min-width: 40em) {
-  .analytics--container {
+  .offers--container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.offers--container img {
+  justify-self: center;
+  width: 100%;
+}
+
+.offers--coloumn {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.offers--card {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: start;
+  grid-gap: 1rem;
+}
+
+.offers--card h4 {
+  margin-block: 0;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.offers--card p {
+  margin-block-start: 10px;
+  margin-block-end: 1.2rem;
+}
+
+.offers--card img {
+  width: 60px;
+}
+
+.about {
+  padding-block: 2.5rem;
+}
+
+@media (min-width: 40em) {
+  .about--text {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 3rem;
   }
 }
 
-@media (min-width: 64em) {
-  .analytics--container {
-    grid-template-columns: repeat(4, 1fr);
+.about--text-body {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.about--text-body p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.about--text-body i {
+  font-size: 2rem;
+}
+
+@media (min-width: 40em) {
+  .about--text-body {
+    grid-template-columns: 35px 1fr;
+    align-items: center;
   }
-}
-
-.analytics--data {
-  text-align: center;
-}
-
-.analytics--data h3 {
-  color: white;
-  margin-bottom: 0;
-  font-size: 3rem;
-}
-
-.analytics--data p {
-  color: #25c12d;
-  font-size: 1.25rem;
-  margin-bottom: 0;
 }
 
 .feature--container {
-  line-height: 1.4em;
+  display: grid;
+}
+
+@media (min-width: 40em) {
+  .feature--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+  }
+  .feature--container li {
+    font-size: 1.4rem;
+  }
 }
 
 .feature--container img {
@@ -700,33 +602,113 @@ nav .nav-header img {
   }
 }
 
-.feature--text-body h3 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin-bottom: 0;
+.feature--text-body {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
 }
 
 .feature--text-body p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.2rem;
-  margin-bottom: .5remn;
+  margin-block: .5rem;
 }
 
-@media (max-width: 63.9375em) {
-  .feature--text-body h3 {
-    font-size: 1.5rem;
+.feature--text-body i {
+  color: #25c12d;
+}
+
+.work-method {
+  padding-block: 1.5rem;
+  margin-block-end: 0 !important;
+}
+
+.work-method h3 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.work-method--container {
+  display: grid;
+  align-items: center;
+  grid-gap: 2.5rem;
+  margin-bottom: 1.8rem;
+  background-color: #f2f2f2;
+  padding-block: 1.6rem;
+}
+
+@media (min-width: 40em) {
+  .work-method--container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 39.9375em) {
-  .feature--text-body {
-    text-align: center;
+@media (min-width: 64em) {
+  .work-method--container {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: start;
+    padding-block: 2.6rem;
+    grid-gap: 1.5rem;
+    width: 80%;
+    margin-inline: auto;
   }
 }
 
-.feature .divider {
-  width: 100%;
-  border-width: 1px;
+.work-method--card {
+  display: grid;
+  grid-gap: 1.5rem;
+  text-align: center;
+  justify-content: center;
+  padding-inline: 1.4rem;
+}
+
+@media (min-width: 40em) {
+  .work-method--card {
+    grid-template-rows: 30px 120px 30px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .work-method--card {
+    grid-template-rows: 30px 140px 30px;
+  }
+}
+
+.work-method--card h4 {
+  font-weight: 900;
+  color: #182f59;
+  font-size: 3rem;
+  margin-block: 0;
+}
+
+.work-method--card img {
+  width: 50px;
+  margin-inline: auto;
+}
+
+.work-method--card p {
+  margin-bottom: 0rem;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 64em) {
+  .work-method--card p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .work-method .last-row {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .work-method .last-row {
+    margin-left: 15rem;
+  }
 }
 
 .clients {
@@ -827,4 +809,4 @@ nav .nav-header img {
   font-weight: 800;
   color: #182f59;
 }
-/*# sourceMappingURL=hack_investigation.css.map */
+/*# sourceMappingURL=online-blackmailing-uk.css.map */
