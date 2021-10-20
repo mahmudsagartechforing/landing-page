@@ -28,21 +28,6 @@ h4 {
     transform: rotate(45deg);
 }
 
-nav {
-    padding-top: 1rem;
-
-    .nav-header {
-        img {
-            width: 100%;
-        }
-    }
-
-    @include breakpoint-down(small) {
-        display: grid !important;
-        justify-content: center !important;
-    }
-}
-
 .jumbotron {
     background-image: url('../images/hack_investigation_header_2.webp');
     background-repeat: no-repeat;

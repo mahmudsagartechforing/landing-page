@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   body {
     font-size: 1.125rem;
   }
@@ -44,7 +44,7 @@ h1 {
   margin-bottom: 1.5;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   h1 {
     font-size: 1.25rem;
   }
@@ -56,7 +56,7 @@ h2 {
   margin-bottom: 1.5625rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   h2 {
     font-size: 2.2rem;
   }
@@ -105,7 +105,7 @@ section .action-button {
 }
 
 .text-white {
-  color: #dddddd !important;
+  color: white !important;
 }
 
 .text-green {
@@ -128,20 +128,20 @@ hr {
 
 .blue-background-banner {
   background-color: #182f59 !important;
-  color: #dddddd !important;
+  color: white !important;
 }
 
 .blue-background-banner h2 {
-  color: #dddddd !important;
+  color: white !important;
 }
 
 .blue-background-banner p {
-  color: #dddddd;
+  color: white;
 }
 
 .blue-background-banner .action-button {
   color: #000080;
-  background-color: #dddddd;
+  background-color: white;
   transition: hover 1s;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
@@ -167,7 +167,7 @@ hr {
   padding-bottom: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--py {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -183,7 +183,7 @@ hr {
   padding-top: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--pt {
     padding-top: 6rem;
   }
@@ -193,7 +193,7 @@ hr {
   padding-block: 1rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--py-1 {
     padding-block: 1.2rem;
   }
@@ -211,7 +211,7 @@ hr {
   padding-bottom: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--pb {
     padding-bottom: 6rem;
   }
@@ -259,12 +259,16 @@ hr {
 
 button,
 .btn {
-  border: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
   cursor: pointer;
+  text-transform: capitalize;
   font-weight: 400;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   button,
   .btn {
     font-weight: 600;
@@ -274,10 +278,11 @@ button,
 .action-button {
   padding: 1rem 1.5rem;
   background-color: #25c12d;
-  color: #dddddd;
+  color: white;
   text-transform: uppercase;
   border-radius: 50px;
   font-size: 1.125rem;
+  cursor: pointer;
   transition: all 1s;
 }
 
@@ -297,27 +302,27 @@ button,
   box-shadow: 0px 3px 5px 1px #1a861f;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 39.9375rem) {
   .hide-for-mobile {
     display: none;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40rem) {
   .hide-for-desktop {
     display: none;
   }
 }
 
 nav {
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 nav .nav-header img {
-  width: 100%;
+  width: 150px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 39.9375rem) {
   nav {
     display: grid !important;
     justify-content: center !important;
@@ -353,7 +358,7 @@ h2 {
   position: relative;
   line-height: 1.125rem;
   margin-block-end: 1rem;
-  color: #dddddd;
+  color: white;
   margin-top: 0;
 }
 
@@ -369,10 +374,10 @@ h2 {
 
 .jumbotron--content h2 {
   font-weight: 900;
-  color: #dddddd;
+  color: white;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .jumbotron--content h2 {
     font-size: 2.5rem;
     text-align: start;
@@ -380,10 +385,10 @@ h2 {
 }
 
 .jumbotron--content p {
-  color: #dddddd;
+  color: white;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .jumbotron--content {
     display: grid;
     grid-template-columns: 2fr 1.4fr;
@@ -402,7 +407,7 @@ h2 {
   font-weight: 900;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .jumbotron--form h2 {
     font-size: 1.6rem;
   }
@@ -418,21 +423,21 @@ h2 {
   grid-gap: 1.5rem;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 63.9375rem) {
   .partners--container, .clients--container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .partners--container, .clients--container {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .partners--container, .clients--container {
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -444,7 +449,7 @@ h2 {
   justify-content: center;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .offers--container {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
@@ -463,7 +468,7 @@ h2 {
   margin-bottom: 0;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .offers--coloumn:first-child p, .offers--coloumn:last-child p {
     padding-block: 3rem;
     border-block-end: none !important;
@@ -489,14 +494,14 @@ h2 {
   margin-bottom: 1.8rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .work-method--container {
     grid-template-columns: repeat(2, 1fr);
     align-items: initial;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .work-method--container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -545,7 +550,7 @@ h2 {
   left: -42px;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .about--container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -563,7 +568,7 @@ h2 {
   padding-block: 3rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .clients--container {
     grid-template-columns: repeat(7, 1fr);
   }
@@ -600,7 +605,7 @@ h2 {
   color: #d1d1d1;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .testimonial--container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -657,12 +662,5 @@ h2 {
   border-radius: 50%;
   padding: .2rem .4rem;
   border: .5px solid green;
-}
-
-.footer-content {
-  display: grid;
-  text-align: center;
-  grid-gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 /*# sourceMappingURL=indexStyle.css.map */

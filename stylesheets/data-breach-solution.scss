@@ -27,22 +27,6 @@ h4 {
     background: inherit;
     transform: rotate(45deg);
 }
-
-nav {
-    padding-top: 1rem;
-
-    .nav-header {
-        img {
-            width: 100%;
-        }
-    }
-
-    @include breakpoint-down(small) {
-        display: grid !important;
-        justify-content: center !important;
-    }
-}
-
 .jumbotron {
     background-image: url('../images/Data_breach_header_1.webp');
     background-repeat: no-repeat;

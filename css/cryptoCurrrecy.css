@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   body {
     font-size: 1.125rem;
   }
@@ -44,7 +44,7 @@ h1 {
   margin-bottom: 1.5;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   h1 {
     font-size: 1.25rem;
   }
@@ -56,7 +56,7 @@ h2 {
   margin-bottom: 1.5625rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   h2 {
     font-size: 2.2rem;
   }
@@ -105,7 +105,7 @@ section .action-button {
 }
 
 .text-white {
-  color: #dddddd !important;
+  color: white !important;
 }
 
 .text-green {
@@ -128,20 +128,20 @@ hr {
 
 .blue-background-banner {
   background-color: #182f59 !important;
-  color: #dddddd !important;
+  color: white !important;
 }
 
 .blue-background-banner h2 {
-  color: #dddddd !important;
+  color: white !important;
 }
 
 .blue-background-banner p {
-  color: #dddddd;
+  color: white;
 }
 
 .blue-background-banner .action-button {
   color: #000080;
-  background-color: #dddddd;
+  background-color: white;
   transition: hover 1s;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
@@ -167,7 +167,7 @@ hr {
   padding-bottom: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--py {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -183,7 +183,7 @@ hr {
   padding-top: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--pt {
     padding-top: 6rem;
   }
@@ -193,7 +193,7 @@ hr {
   padding-block: 1rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--py-1 {
     padding-block: 1.2rem;
   }
@@ -211,7 +211,7 @@ hr {
   padding-bottom: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .container--pb {
     padding-bottom: 6rem;
   }
@@ -259,12 +259,16 @@ hr {
 
 button,
 .btn {
-  border: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
   cursor: pointer;
+  text-transform: capitalize;
   font-weight: 400;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   button,
   .btn {
     font-weight: 600;
@@ -274,10 +278,11 @@ button,
 .action-button {
   padding: 1rem 1.5rem;
   background-color: #25c12d;
-  color: #dddddd;
+  color: white;
   text-transform: uppercase;
   border-radius: 50px;
   font-size: 1.125rem;
+  cursor: pointer;
   transition: all 1s;
 }
 
@@ -297,27 +302,27 @@ button,
   box-shadow: 0px 3px 5px 1px #1a861f;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 39.9375rem) {
   .hide-for-mobile {
     display: none;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40rem) {
   .hide-for-desktop {
     display: none;
   }
 }
 
 nav {
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 nav .nav-header img {
-  width: 100%;
+  width: 150px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 39.9375rem) {
   nav {
     display: grid !important;
     justify-content: center !important;
@@ -358,21 +363,6 @@ h4 {
   transform: rotate(45deg);
 }
 
-nav {
-  padding-top: 1rem;
-}
-
-nav .nav-header img {
-  width: 100%;
-}
-
-@media (max-width: 39.9375em) {
-  nav {
-    display: grid !important;
-    justify-content: center !important;
-  }
-}
-
 .jumbotron {
   background-image: url("../images/crypto_investigation.webp");
   background-repeat: no-repeat;
@@ -381,7 +371,7 @@ nav .nav-header img {
   position: relative;
   line-height: 1.125rem;
   margin-block-end: 1rem;
-  color: #dddddd;
+  color: white;
   margin-top: 0;
 }
 
@@ -397,10 +387,10 @@ nav .nav-header img {
 
 .jumbotron--content h2 {
   font-weight: 900;
-  color: #dddddd;
+  color: white;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .jumbotron--content h2 {
     font-size: 2.5rem;
     text-align: start;
@@ -408,7 +398,7 @@ nav .nav-header img {
 }
 
 .jumbotron--content p {
-  color: #dddddd;
+  color: white;
   font-size: 1.8rem;
   line-height: 1.4;
 }
@@ -418,7 +408,7 @@ nav .nav-header img {
   font-size: .8rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .jumbotron--content {
     display: grid;
     grid-template-columns: 2fr 1.4fr;
@@ -433,7 +423,7 @@ nav .nav-header img {
   font-weight: 900;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .jumbotron--form h2 {
     font-size: 1.6rem;
   }
@@ -449,21 +439,21 @@ nav .nav-header img {
   grid-gap: 1.5rem;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 63.9375rem) {
   .partners--container, .clients--container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .partners--container, .clients--container {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .partners--container, .clients--container {
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -495,7 +485,7 @@ nav .nav-header img {
   display: grid;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .about--container, .feature--container {
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -534,7 +524,7 @@ nav .nav-header img {
   margin-bottom: 1.8rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .work-method--container {
     display: flex;
     flex-wrap: wrap;
@@ -559,37 +549,37 @@ nav .nav-header img {
   padding-inline: .8rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .work-method--card {
     width: 45%;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .work-method--card {
     width: 32%;
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .work-method--card:last-child {
     margin-inline: auto;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .work-method--card:last-child {
     margin-inline: 0;
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .work-method .last-row {
     margin-left: 0;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .work-method .last-row {
     margin-left: 15rem;
   }
@@ -609,13 +599,13 @@ nav .nav-header img {
   grid-gap: 2rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .analytics--container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .analytics--container {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -626,7 +616,7 @@ nav .nav-header img {
 }
 
 .analytics--data h3 {
-  color: #dddddd;
+  color: white;
   margin-bottom: 0;
   font-size: 3rem;
 }
@@ -645,7 +635,7 @@ nav .nav-header img {
   order: 0;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .feature--container img {
     order: 1;
   }
@@ -655,7 +645,7 @@ nav .nav-header img {
   order: 1;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .feature--text, #cybercrime .about--text {
     order: 0;
   }
@@ -673,13 +663,13 @@ nav .nav-header img {
   margin-bottom: .5remn;
 }
 
-@media (max-width: 63.9375em) {
+@media (max-width: 63.9375rem) {
   .feature--text-body h3 {
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 39.9375rem) {
   .feature--text-body {
     text-align: center;
   }
@@ -690,7 +680,7 @@ nav .nav-header img {
   padding-block: 3rem;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   .clients--container {
     grid-template-columns: repeat(7, 1fr);
   }
@@ -727,7 +717,7 @@ nav .nav-header img {
   color: #d1d1d1;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   .testimonial--container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -793,11 +783,11 @@ nav .nav-header img {
 }
 
 #cybercrime .jumbotron h2 {
-  color: #dddddd;
+  color: white;
   text-align: center;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   #cybercrime .coloumn-5 {
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
@@ -813,13 +803,13 @@ nav .nav-header img {
   }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 40rem) {
   #cybercrime .work-method--container {
     justify-content: center;
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
   #cybercrime .work-method--card {
     width: 30%;
   }

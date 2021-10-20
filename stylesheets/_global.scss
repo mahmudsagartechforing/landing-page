@@ -261,8 +261,12 @@ hr{
 
 button,
 .btn {
-    border: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
     cursor: pointer;
+    text-transform: capitalize;
     font-weight: 400;
     @include breakpoint-up(medium){
         font-weight: 600;
@@ -275,6 +279,7 @@ button,
     text-transform: uppercase;
     border-radius: $border-pill;
     font-size: $font-lg;
+    cursor: pointer;
     transition: all 1s;
 
     i{
@@ -302,9 +307,8 @@ button,
 }
 
 .hide-for-desktop {
-
     //hide for desktop viewport width
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
         display: none;
     }
 }
