@@ -338,7 +338,6 @@ nav .nav-header img {
 
 h2 {
   text-align: center;
-  color: #000080;
   text-transform: uppercase;
 }
 
@@ -408,7 +407,7 @@ nav .menu-collapse {
   top: 0;
   z-index: 10;
   inset-inline: 0;
-  background: #182a59c7;
+  background: #182a59e3;
   animation-name: opacityEffect;
   animation-duration: .8s;
 }
@@ -664,7 +663,6 @@ nav .menu-collapse {
 }
 
 .work-method {
-  background-color: #f2f2f2;
   padding-block: 1.5rem;
 }
 
@@ -684,74 +682,33 @@ nav .menu-collapse {
 @media (min-width: 40rem) {
   .work-method--container {
     grid-template-columns: repeat(2, 1fr);
-    align-items: initial;
-  }
-}
-
-@media (min-width: 64rem) {
-  .work-method--container {
-    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
   }
 }
 
 .work-method--card {
+  background-color: #182a59;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  justify-content: center;
   grid-gap: 1.5rem;
+  color: white;
+  padding-block: 2rem;
+  padding-inline: 1.5rem;
+  border-radius: 15px;
+  height: 36.625rem;
 }
 
-.work-method--card img {
-  width: 100%;
-}
-
-.work-method--card h4 {
-  margin: 0;
+.work-method--card h3 {
+  font-size: 1.8rem;
+  margin-block: 0;
 }
 
 .work-method--card p {
-  padding-inline: .8rem;
-  text-align: justify;
-}
-
-.about h2 {
-  text-align: start;
-}
-
-.about img {
-  width: 100%;
-}
-
-.about li {
-  list-style: none;
-  position: relative;
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
-}
-
-.about li::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f00c";
-  position: absolute;
-  color: #25c12d;
-  left: -42px;
-}
-
-@media (min-width: 40rem) {
-  .about--container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    grid-gap: 1rem;
-  }
-  .about--container li {
-    color: #333333;
-    font-size: 1.4rem;
-  }
+  color: white;
+  margin-block: 0;
 }
 
 .clients {
-  background-color: #f2f2f2;
   padding-block: 3rem;
 }
 
@@ -759,66 +716,6 @@ nav .menu-collapse {
   .clients--container {
     grid-template-columns: repeat(7, 1fr);
   }
-}
-
-.testimonial h2 {
-  margin-bottom: .5rem;
-}
-
-.testimonial .subHeader {
-  text-align: center;
-  margin-top: .5rem;
-}
-
-.testimonial--text {
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  padding-inline: 1rem;
-  padding-block-start: 1.8rem;
-  padding-block-end: 3rem;
-  position: relative;
-  min-height: 285px;
-}
-
-.testimonial--text::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f10e";
-  display: block;
-  font-size: 1.8rem;
-  position: absolute;
-  right: 20px;
-  bottom: 15px;
-  color: #d1d1d1;
-}
-
-@media (min-width: 64rem) {
-  .testimonial--container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-  }
-}
-
-.testimonial--author {
-  display: grid;
-  grid-template-columns: 115px 1fr;
-  grid-gap: 1rem;
-}
-
-.testimonial--author img {
-  width: 100%;
-  border-radius: 50%;
-  align-self: center;
-  justify-self: center;
-}
-
-.testimonial--author-info {
-  display: grid;
-}
-
-.testimonial--author-info .info {
-  color: #d1d1d1;
 }
 
 .banner {
@@ -838,16 +735,158 @@ nav .menu-collapse {
 
 .banner .action-button {
   margin-top: 1.8rem;
-  border-radius: 2px;
+  border-radius: 5px;
   text-transform: uppercase;
-  box-shadow: 0px 2px #187e1d;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
-.banner .action-button i {
-  background-color: #1c8e22;
+.portfolio {
+  background-color: #ECECF0;
+  padding-block: 3rem;
+  color: #182f59;
+}
+
+.portfolio--container {
+  display: grid;
+  grid-gap: 1rem;
+  align-items: center;
+}
+
+.portfolio--container p {
+  color: #182f59;
+}
+
+@media (min-width: 40rem) {
+  .portfolio--container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.portfolio--container .profile {
+  justify-self: center;
+  text-align: center;
+}
+
+.portfolio--container .profile img {
+  width: 300px;
   border-radius: 50%;
-  padding: .2rem .4rem;
-  border: .5px solid green;
+}
+
+.portfolio--container .profile a {
+  border: 5px solid #182f59;
+  color: #182f59;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 3px;
+  padding: .5rem 1.2rem;
+  transition: background-color .5s;
+}
+
+.portfolio--container .profile a i {
+  color: #44bcd2;
+  margin-inline-end: .5rem;
+}
+
+.portfolio--container .profile a:hover {
+  background-color: #182a591a;
+}
+
+.portfolio--container .profile-details {
+  justify-self: start;
+  display: grid;
+  grid-gap: 1.3rem;
+  text-align: center;
+}
+
+@media (min-width: 40rem) {
+  .portfolio--container .profile-details {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.testimonial {
+  background-color: #f2f2f2;
+}
+
+.testimonial h2 {
+  margin-bottom: .5rem;
+}
+
+.testimonial .subHeader {
+  text-align: center;
+  margin-top: .5rem;
+}
+
+.testimonial--container .item {
+  position: relative;
+  text-align: center;
+}
+
+.testimonial--container .item img {
+  width: 100%;
+}
+
+.testimonial--container .item h3 {
+  position: absolute;
+  top: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.slick-prev {
+  left: 25px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 25px;
+}
+
+.slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f0a9';
+  font-size: 1.5rem;
+}
+
+.slick-prev::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f0a8';
+  font-size: 1.5rem;
+}
+
+.slick-dotted.slick-slider {
+  width: 45%;
+}
+
+.slick-dots {
+  bottom: 15px;
+}
+
+.slick-dots li button:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-size: .5rem;
+  opacity: 1;
+  color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.slick-dots li button {
+  padding: 0;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
 }
 /*# sourceMappingURL=cybercrime-investigator-uk.css.map */

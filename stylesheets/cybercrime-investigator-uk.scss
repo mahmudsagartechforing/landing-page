@@ -1,9 +1,7 @@
 @import "global_imports";
 
-// @import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
 h2 {
     text-align: center;
-    color: $primaryHeading;
     text-transform: uppercase;
 }
 
@@ -28,11 +26,12 @@ nav {
     max-height: 90px;
     transition: max-height .8s linear;
     overflow-y: hidden;
-    
 
-    .menu-collapse{
+
+    .menu-collapse {
         justify-self: end;
     }
+
     @include breakpoint-up(medium) {
         border: none
     }
@@ -44,16 +43,19 @@ nav {
         padding-block: 2rem;
         grid-column: 1/ span 2;
         text-align: center;
+
         a {
             display: block;
+
             &:not(:last-child) {
                 margin-block-end: 2rem;
             }
         }
     }
-    
+
     @include breakpoint-up(medium) {
         justify-self: end;
+
         a {
             &:not(:last-child) {
                 margin-inline-end: 1rem;
@@ -61,22 +63,30 @@ nav {
         }
     }
 }
-.show-on-mobile{
+
+.show-on-mobile {
     max-height: 350px;
 }
+
 .sticky-header {
     position: sticky;
     top: 0;
     z-index: 10;
     inset-inline: 0;
-    background: #182a59c7;
+    background: #182a59e3;
     animation-name: opacityEffect;
     animation-duration: .8s;
 }
+
 @keyframes opacityEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 .jumbotron {
     background-repeat: no-repeat;
@@ -157,6 +167,7 @@ nav {
         padding-inline: 2rem;
         padding-block: 2rem;
         position: relative;
+
         .overlay {
             background-color: #ffffff3b;
         }
@@ -174,13 +185,16 @@ nav {
         @include breakpoint-down(medium) {
             background-size: cover;
             background-position: -70% center;
-            h3{
+
+            h3 {
                 width: 75%;
             }
-            p{
+
+            p {
                 width: 50%;
             }
         }
+
         @include breakpoint-down(small) {
             background-repeat: no-repeat;
             background-size: 170%;
@@ -188,7 +202,8 @@ nav {
             padding-inline: 2rem;
             padding-block: 2rem;
             position: relative;
-            }
+        }
+
         @include breakpoint-down(xSmall) {
             background-size: 200%;
             background-position: 27% center;
@@ -292,7 +307,8 @@ nav {
 
     &--container {
         display: grid;
-        video{
+
+        video {
             width: 80%;
             justify-self: center;
         }
@@ -300,7 +316,6 @@ nav {
 }
 
 .work-method {
-    background-color: $grayBackground;
     padding-block: 1.5rem;
 
     h3 {
@@ -317,76 +332,34 @@ nav {
 
         @include breakpoint-up(medium) {
             grid-template-columns: repeat(2, 1fr);
-            align-items: initial;
-        }
-
-        @include breakpoint-up(large) {
-            grid-template-columns: repeat(3, 1fr);
+            align-items: start;
         }
     }
 
     &--card {
+        background-color: #182a59;
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        justify-content: center;
         grid-gap: 1.5rem;
+        color: $secondaryColor;
+        padding-block: 2rem;
+        padding-inline: 1.5rem;
+        border-radius: 15px;
+        height: 36.625rem;
 
-        img {
-            width: 100%;
-        }
-
-        h4 {
-            margin: 0;
+        h3 {
+            font-size: 1.8rem;
+            margin-block: 0;
         }
 
         p {
-            padding-inline: .8rem;
-            text-align: justify;
-        }
-    }
-}
-
-.about {
-    h2 {
-        text-align: start;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    li {
-        list-style: none;
-        position: relative;
-        font-size: 1.7rem;
-        margin-bottom: 1.5rem;
-
-        &::before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            content: "\f00c";
-            position: absolute;
-            color: $techForingGreen;
-            left: -42px;
-        }
-    }
-
-    &--container {
-        @include breakpoint-up(medium) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            grid-gap: 1rem;
-
-            li {
-                color: $primaryText;
-                font-size: 1.4rem;
-            }
+            color: $secondaryColor;
+            margin-block: 0;
         }
     }
 }
 
 .clients {
-    background-color: $grayBackground;
     padding-block: 3rem;
 
     &--container {
@@ -394,70 +367,6 @@ nav {
 
         @include breakpoint-up(medium) {
             grid-template-columns: repeat(7, 1fr);
-        }
-    }
-}
-
-.testimonial {
-    h2 {
-        margin-bottom: .5rem;
-    }
-
-    .subHeader {
-        text-align: center;
-        margin-top: .5rem;
-    }
-
-    &--text {
-        background-color: $grayBackground;
-        border-radius: $border-rounded;
-        padding-inline: 1rem;
-        padding-block-start: 1.8rem;
-        padding-block-end: 3rem;
-        position: relative;
-        min-height: 285px;
-
-        &::after {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            content: "\f10e";
-            display: block;
-            font-size: 1.8rem;
-            position: absolute;
-            right: 20px;
-            bottom: 15px;
-            color: #d1d1d1;
-        }
-    }
-
-    &--container {
-
-        @include breakpoint-up(large) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1rem
-        }
-    }
-
-    &--author {
-        display: grid;
-        grid-template-columns: 115px 1fr;
-        grid-gap: 1rem;
-
-        img {
-            width: 100%;
-            border-radius: $border-circle;
-            align-self: center;
-            justify-self: center;
-        }
-
-    }
-
-    &--author-info {
-        display: grid;
-
-        .info {
-            color: #d1d1d1;
         }
     }
 }
@@ -478,16 +387,176 @@ nav {
 
     .action-button {
         margin-top: 1.8rem;
-        border-radius: 2px;
+        border-radius: 5px;
         text-transform: uppercase;
-        box-shadow: 0px 2px #187e1d;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+}
 
-        i {
-            background-color: #1c8e22;
-            border-radius: $border-circle;
-            padding: .2rem .4rem;
-            border: .5px solid green;
+.portfolio {
+    background-color: #ECECF0;
+    padding-block: 3rem;
+    color: $techForingBlue;
+
+    &--container {
+        display: grid;
+        grid-gap: 1rem;
+        align-items: center;
+
+        p {
+            color: $techForingBlue;
+        }
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .profile {
+            justify-self: center;
+            text-align: center;
+
+            img {
+                width: 300px;
+                border-radius: $border-circle;
+            }
+
+            a {
+                border: 5px solid #182f59;
+                color: #182f59;
+                font-size: 1.5rem;
+                background-color: white;
+                border-radius: 3px;
+                padding: .5rem 1.2rem;
+                transition: background-color .5s;
+
+                i {
+                    color: #44bcd2;
+                    margin-inline-end: .5rem;
+                }
+
+                &:hover {
+                    background-color: #182a591a;
+                }
+            }
+        }
+
+        .profile-details {
+            justify-self: start;
+            display: grid;
+            grid-gap: 1.3rem;
+            text-align: center;
+
+            @include breakpoint-up(medium) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+        }
+    }
+
+}
+
+
+.testimonial {
+    background-color: $grayBackground;
+
+    h2 {
+        margin-bottom: .5rem;
+    }
+
+    .subHeader {
+        text-align: center;
+        margin-top: .5rem;
+    }
+
+    &--container {
+
+        .item {
+            position: relative;
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+
+            h3 {
+                position: absolute;
+                top: 50%;
+                color: white;
+                transform: translate(-50%, -50%);
+                left: 50%;
+            }
         }
     }
 }
+
+.slick-prev{
+    left: 25px;
+    z-index: 1;
+}
+
+.slick-next{
+    right: 25px;
+}
+.slick-next::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f0a9';
+    font-size: 1.5rem;
+}
+.slick-prev::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f0a8';
+    font-size: 1.5rem;
+}
+
+.slick-dotted.slick-slider {
+    width: 45%;
+}
+
+.slick-dots {
+    bottom: 15px;
+}
+
+
+.slick-dots li button:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f111";
+    font-size: .5rem;
+    opacity: 1;
+    color: transparent;
+    border: 1px solid #fff;
+    border-radius: $border-circle;
+    position: relative;
+}
+
+.slick-dots li{
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.slick-dots li button{
+    padding: 0;
+}
+
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+    opacity: 1;
+}
+
+// .slick-slider {
+//     -webkit-user-select: text;
+//     -khtml-user-select: text;
+//     -moz-user-select: text;
+//     -ms-user-select: text;
+//     user-select: text;
+// }
+
+// .slick-list.draggable {
+//     -webkit-user-select: text;
+//     -khtml-user-select: text;
+//     -moz-user-select: text;
+//     -ms-user-select: text;
+//     user-select: text;
+// }

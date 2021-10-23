@@ -497,7 +497,7 @@ h2 {
 @media (min-width: 40rem) {
   .work-method--container {
     grid-template-columns: repeat(2, 1fr);
-    align-items: initial;
+    align-items: start;
   }
 }
 

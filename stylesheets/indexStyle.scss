@@ -154,7 +154,7 @@ h2 {
 
         @include breakpoint-up(medium) {
             grid-template-columns: repeat(2, 1fr);
-            align-items: initial;
+            align-items: start;
         }
 
         @include breakpoint-up(large) {

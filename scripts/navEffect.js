@@ -12,3 +12,4 @@ window.addEventListener("scroll", () => {
     } else
         menuHeader.classList.remove("sticky-header")
 })
+
