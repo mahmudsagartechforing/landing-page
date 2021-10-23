@@ -343,8 +343,8 @@
     <script src="./scripts/navEffect.js"></script>
 
     <script>
-        $(document).ready(function () {
-            $('.slider').slick('unslick').slick('reinit').slick({
+        $(window).on('load', function() { 
+            $('.slider').slick({
                 dots: true,
                 infinite: true,
                 speed: 1000,
